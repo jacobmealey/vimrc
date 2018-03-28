@@ -2,6 +2,7 @@ filetype plugin indent on
 au BufNewFile,BufRead *.rs set filetype=rust
 set number 
 syntax on
+colo onedark
 set background=dark
 
 set cursorline
