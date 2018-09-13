@@ -12,6 +12,8 @@ if exists("b:current_syntax")
   finish
 endif
 
+set smartindent
+
 runtime! syntax/java.vim
 unlet b:current_syntax
 
@@ -303,5 +305,6 @@ hi def link processingTodo		Todo
 
 let b:current_syntax = "processing"
 
+syn region rustFoldBraces start="{" end="}" transparent fold
 " vim: ts=8
 
