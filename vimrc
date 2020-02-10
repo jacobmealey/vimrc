@@ -3,9 +3,6 @@ au BufNewFile,BufRead *.rs set filetype=rust
 au BufNewFile,BufRead *.pde set filetype=processing
 set number 
 syntax on
-colo onedark
-set background=dark
-
 set cursorline
 set backspace=2  "compatible with version 5.4 and earlier
 filetype indent on 
@@ -25,11 +22,14 @@ if index(fts, &filetype) == -1
 	map c o#<space>
 endif
 
-execute pathogen#infect()
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ycm-core/YouCompleteMe'
+call plug#end()
+
 map <C-n> :NERDTreeToggle<CR>
-
-
 
