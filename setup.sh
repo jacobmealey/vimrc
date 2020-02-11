@@ -3,7 +3,7 @@ echo "| |  / /  _/  |/  / __ \/ ____/"
 echo "| | / // // /|_/ / /_/ / /     "
 echo "| |/ // // /  / / _, _/ /___   "
 echo "|___/___/_/  /_/_/ |_|\____/   "
-echo "Jacob Mealeys VIMRC configuration tool!"
+echo -e "\033[1;31mJacob Mealeys VIMRC configuration tool!\033[0m"
 
 echo "Copying Files"
 cp vimrc ~/.vimrc
