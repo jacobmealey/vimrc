@@ -12,3 +12,6 @@ cp -rf ./ ~/.vim
 echo "Building YouCompleteMe"
 python3 ~/.vim/plugged/YouCompleteMe/install.py --clang-completer
 
+echo "Cleaning"
+rm -rf ~/.vim/plugged/*
+
