@@ -9,5 +9,3 @@ echo "Copying Files"
 cp vimrc ~/.vimrc
 cp -rf ./ ~/.vim
 
-echo "Compiling plugins"
-python3 ~/.vim/plugged/YouCompleteMe/install.py --clang-completer

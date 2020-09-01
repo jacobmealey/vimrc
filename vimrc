@@ -6,6 +6,7 @@ syntax on
 set cursorline
 set backspace=2  "compatible with version 5.4 and earlier
 filetype indent on 
+set tabstop=4 shiftwidth=4  expandtab
 
 inoremap {<CR> {<CR>}<Esc>ko
 inoremap { {}<Left>
@@ -16,12 +17,6 @@ let fts = ['c', 'cpp', 'rust', 'processing', 'go', 'java']
 if index(fts, &filetype) == -1
 	map c o//<space>
 endif
-
-let fts = ['python', 'shell']
-if index(fts, &filetype) == -1
-	map c o#<space>
-endif
-
 
 
 call plug#begin('~/.vim/plugged')
